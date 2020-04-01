@@ -2,7 +2,7 @@
 $($(document).ready(function() {
 
   var dropMenu = $(".mainMenuDx ul li a");
-  var menuHamburger = $ ("#hamburgerMenu");
+  var menuHamburger = $ (".hamburgerMenu");
   var closeIcon = $ (".close");
   var hamburgerIcon = $ (".iconHamburgerMenu");
 
@@ -31,18 +31,19 @@ $($(document).ready(function() {
     function(){
       hamburgerIcon.addClass('iconHamburgerMenuHide');
       $(".menuTop").addClass('menuTopHide');
-      menuHamburger.show();
+      menuHamburger.addClass('hamburgerMenuShow');
       $(".home").addClass('homeHide');
-      $(".menuSxHamburger").addClass('menuSxShow');
+      // $(".home").hide();
     }
   );
   closeIcon.click(
     function(){
       hamburgerIcon.removeClass('iconHamburgerMenuHide');
       $(".menuTop").removeClass('menuTopHide');
-      menuHamburger.hide();
+      menuHamburger.removeClass('hamburgerMenuShow');
       $(".home").removeClass('homeHide');
-      $(".menuSxHamburger").removeClass('menuSxShow');
+      // $(".home").show();
+
     }
   );
 

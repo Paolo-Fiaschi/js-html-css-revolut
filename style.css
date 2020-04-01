@@ -77,13 +77,6 @@ a:visited{
   border-radius: 30px;
   color: white !important;
 }
-#hamburgerMenu{
-  position: relative;
-  display: none;
-}
-.iconHamburgerMenu {
-  display: none;
-}
 /* drop down menu full screen----------------------*/
 .accountContainer{
   position: relative;
@@ -107,27 +100,69 @@ a:visited{
   display: flex;
   flex-direction: column;
 }
+/* Hamburger menu ---------------------*/
+.hamburgerMenu{
+  position: relative;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+.iconHamburgerMenu {
+  display: none;
+}
+
+.hamburgerMenuList{
+  display: flex;
+  justify-content: space-evenly;
+  height: 50vh;
+  padding-top: 30px;
+}
+.hamburgerMenuList li a{
+  color: white;
+  font-size: 20px;
+}
+.hamburgerMenuList li a:hover{
+  color: #73D462;
+  border-bottom: 2px solid #73D462;
+}
+.hamburgerMenuList li:last-child a:hover{
+  border: none;
+  box-shadow: 5px 5px rgb(31, 44, 55);
+  position: relative;
+}
+
 /* media query */
 @media screen and (max-width: 1000px){
 
-  .menuSx,
-  .menuSxHamburger{
-    display: none;
+  .hamburgerMenuShow{
+    display: flex;
   }
-  .menuSxShow{
+  .menuTopHide{
+  display: none;
+  }
+  .hamburgerMenuTop{
+    height: 30%;
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
   }
-  .homeHide{
-    display: none;
+  .hamburgerMenuTop li{
+    padding-bottom: 20px;
   }
-  .MenuSxShow{
+  .hamburgerMenuDown{
+    height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 35%;
-    font-size: 18px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  .menuSx{
+    display: none;
   }
   .mainMenuDx ul{
     display: none;
@@ -157,12 +192,8 @@ a:visited{
     font-size: 20px;
     text-decoration: none;
   }
-  #hamburgerMenu{
+  .homeHide{
     display: none;
-    height: 100vh;
-    position: relative;
   }
-  .menuTopHide{
-  display: none;
-  }
+
 }
