@@ -110,7 +110,8 @@ a:visited{
 /* media query */
 @media screen and (max-width: 1000px){
 
-  .menuSx{
+  .menuSx,
+  .menuSxHamburger{
     display: none;
   }
   .menuSxShow{
@@ -120,9 +121,18 @@ a:visited{
   .homeHide{
     display: none;
   }
+  .MenuSxShow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+    font-size: 18px;
+  }
   .mainMenuDx ul{
     display: none;
   }
+
   .iconHamburgerMenu {
     display: block;
     font-size: 20px;

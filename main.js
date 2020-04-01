@@ -32,10 +32,19 @@ $($(document).ready(function() {
       hamburgerIcon.addClass('iconHamburgerMenuHide');
       $(".menuTop").addClass('menuTopHide');
       menuHamburger.show();
-      $(".mainMenuSx").addClass('mainMenuSxHide');
+      $(".home").addClass('homeHide');
+      $(".menuSxHamburger").addClass('menuSxShow');
     }
-  )
-
+  );
+  closeIcon.click(
+    function(){
+      hamburgerIcon.removeClass('iconHamburgerMenuHide');
+      $(".menuTop").removeClass('menuTopHide');
+      menuHamburger.hide();
+      $(".home").removeClass('homeHide');
+      $(".menuSxHamburger").removeClass('menuSxShow');
+    }
+  );
 
 
 
