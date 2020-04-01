@@ -17,7 +17,7 @@ header{
   margin-bottom: 70px; */
 }
 /* menu visible full screen -------------*/
-#menuTop{
+.menuTop{
   height: 50px;
   background-color: #F3F4F5;
 }
@@ -35,6 +35,10 @@ header{
   justify-content: space-around;
   align-items: center;
   width: 35%;
+  font-size: 18px;
+}
+.home{
+  font-size: 35px;
 }
 .mainMenuSx ul{
   display: flex;
@@ -50,7 +54,7 @@ header{
   padding-right: 10px;
 }
 .mainMenuDx{
-  width: 45%;
+  width: 50%;
 }
 .mainMenuDx ul{
   display: flex;
@@ -65,7 +69,7 @@ a:visited{
   text-decoration: none;
 }
 .mainMenuDx ul li{
-  padding: 18px;
+  padding: 20px;
 }
 .getApp{
   background-color: #D2007E;
@@ -84,43 +88,71 @@ a:visited{
 .accountContainer{
   position: relative;
 }
-.accountDropDown{
+.accountDropDown,
+.productsDropDown,
+.companyDropDown,
+.helpDropDown{
   position: absolute;
   top: 40px;
   left: 0;
   width: 100%;
   box-shadow: 2px 2px #F3F4F5;
   border: 1px solid #F3F4F5;
+  display: none;
 }
-.accountDropDown ul{
+.accountDropDown ul,
+.productsDropDown ul,
+.companyDropDown ul,
+.helpDropDown ul{
   display: flex;
   flex-direction: column;
 }
-.productsDropDown,
-.companyDropDown,
-.helpDropDown{
-  position: absolute;
-}
 /* media query */
-@media screen and (max-width: 1250px)
-{
-    .mainMenuDx ul{
-        display: none;
-    }
-    .iconHamburgerMenu {
-        display: block;
-        height: 100%;
-        line-height: 70px;
-        color: lightgrey;
-        font-size: 20px;
-    }
-    .mainMenuDx{
-      display: flex;
-      justify-content: flex-end;
-      margin-right: 15px;
-    }
-    /* .hamburgerMenuClick{
-      display: flex;
-    } */
+@media screen and (max-width: 1000px){
 
+  .menuSx{
+    display: none;
+  }
+  .menuSxShow{
+    display: flex;
+    flex-direction: column;
+  }
+  .homeHide{
+    display: none;
+  }
+  .mainMenuDx ul{
+    display: none;
+  }
+  .iconHamburgerMenu {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+  .mainMenuDx{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    position: relative;
+  }
+  .iconHamburgerMenuHide{
+    display: none;
+  }
+  .close {
+    /* display: none; */
+    position: absolute;
+    right: 48px;
+    top: 40px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  #hamburgerMenu{
+    display: none;
+    height: 100vh;
+    position: relative;
+  }
+  .menuTopHide{
+  display: none;
+  }
 }
