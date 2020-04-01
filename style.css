@@ -1,0 +1,126 @@
+/* regole generali */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+span{
+  display: inline-block;
+}
+header{
+  /* height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 70px; */
+}
+/* menu visible full screen -------------*/
+#menuTop{
+  height: 50px;
+  background-color: #F3F4F5;
+}
+#mainMenu{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 120px;
+  width: 100%;
+}
+.mainMenuSx{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 35%;
+}
+.mainMenuSx ul{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+}
+.mainMenuSx ul li{
+  padding: 10px;
+}
+.mainMenuSx ul:last-child li a{
+  padding-right: 10px;
+}
+.mainMenuDx{
+  width: 45%;
+}
+.mainMenuDx ul{
+  display: flex;
+  /* justify-content: space-around; */
+  height: 100%;
+  align-items: center;
+  font-size: 18px;
+}
+a,
+a:visited{
+  color: #8D8E90;
+  text-decoration: none;
+}
+.mainMenuDx ul li{
+  padding: 18px;
+}
+.getApp{
+  background-color: #D2007E;
+  padding: 13px 18px;
+  border-radius: 30px;
+  color: white !important;
+}
+#hamburgerMenu{
+  position: relative;
+  display: none;
+}
+.iconHamburgerMenu {
+  display: none;
+}
+/* drop down menu full screen----------------------*/
+.accountContainer{
+  position: relative;
+}
+.accountDropDown{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  box-shadow: 2px 2px #F3F4F5;
+  border: 1px solid #F3F4F5;
+}
+.accountDropDown ul{
+  display: flex;
+  flex-direction: column;
+}
+.productsDropDown,
+.companyDropDown,
+.helpDropDown{
+  position: absolute;
+}
+/* media query */
+@media screen and (max-width: 1250px)
+{
+    .mainMenuDx ul{
+        display: none;
+    }
+    .iconHamburgerMenu {
+        display: block;
+        height: 100%;
+        line-height: 70px;
+        color: lightgrey;
+        font-size: 20px;
+    }
+    .mainMenuDx{
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 15px;
+    }
+    /* .hamburgerMenuClick{
+      display: flex;
+    } */
+
+}
